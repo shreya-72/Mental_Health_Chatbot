@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 
 
-from helper.openai_api import text_complition
+from openai_api import text_complition
 
 
 app = Flask(__name__)
