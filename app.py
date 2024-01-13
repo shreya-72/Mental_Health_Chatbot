@@ -27,7 +27,7 @@ def esReceiveMessage():
             })
         else:
             return jsonify({
-                'fulfillmentText': 'OpenAI API call failed.'
+                'fulfillmentText': 'Sorry, didn't catch it. Can you say it again?.'
             })
     except Exception as e:
         print(f"Error: {str(e)}")
