@@ -9,10 +9,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return 'All is well...'
+    return 'Rendered Successfully'
 
 
-@app.route('/dialogflow/es/receiveMessage', methods=['POST'])
+@app.route('/dialogflow/receiveMessages', methods=['POST'])
 def esReceiveMessage():
     try:
         data = request.get_json()
