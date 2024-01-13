@@ -19,7 +19,7 @@ def esReceiveMessage():
 
         query_text = data['queryResult']['queryText']
 
-        result = text_complition(query_text)
+        result = text_completion(query_text)
 
         if result['status'] == 1:
             return jsonify({
