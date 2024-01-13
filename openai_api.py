@@ -10,19 +10,12 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 
 
 def text_complition(prompt: str) -> dict:
-    '''
-    Call Openai API for text completion
-
-    Parameters:
-        - prompt: user query (str)
-
-    Returns:
-        - dict
-    '''
+    base_prompt = "You are a helpful and supportive counselling agent designed to assist with mental health. Please provide guidance to the user."
+    full_prompt = f'{base_prompt}\nHuman: {prompt}\nAI: 
     try:
         response = openai.Completion.create(
-            model='text-davinci-003',
-            prompt=f'Human: {prompt}\nAI: ',
+            model='gpt-3.5-turbo',
+            prompt=full_prompt,
             temperature=0.9,
             max_tokens=150,
             top_p=1,
