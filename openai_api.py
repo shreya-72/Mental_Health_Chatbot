@@ -9,7 +9,7 @@ load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
 
-def text_complition(prompt: str) -> dict:
+def text_completion(prompt: str) -> dict:
     base_prompt = "You are a helpful and supportive counselling agent designed to assist with mental health. Please provide guidance to the user."
     full_prompt = f'{base_prompt}\nHuman: {prompt}\nAI: 
     try:
